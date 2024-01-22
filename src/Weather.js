@@ -23,12 +23,12 @@ export default function Weather(props) {
   function search() {
     const apiKey = "f3009e4852fa0a079dab291dabf020c4";
 
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metrics`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
   function handleSubmit(event) {
-    event.preventDeault();
+    event.prevent.preventDefault();
     search();
   }
 
